@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_widgets/views/custom_widgets/constant_variables.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeView extends ConsumerWidget {
   const HomeView({super.key});
@@ -45,15 +46,15 @@ class HomeView extends ConsumerWidget {
                                  const Column(
                                    crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
-                                      Text("Shivani Lonare", style: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.w600),),
-                                      Text("shivani.lonare98@gmail.com", style: TextStyle(color: Colors.black, fontSize: 14, fontWeight: FontWeight.w400),)
+                                      Text("Shivani Lonare", style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.w600),),
+                                      Text("shivani.lonare98@gmail.com", style: TextStyle(color: Colors.black54, fontSize: 14, fontWeight: FontWeight.w400),)
                                     ],
                                   )
                                   ],
                                 ),
                                 Divider(color: Colors.grey.shade300, thickness: 1,),
                                 SizedBox(
-                                  height: 55,
+                                  height: 40,
                                   child: TextField(
                                     controller: TextEditingController(),
                                     decoration: InputDecoration(
@@ -67,8 +68,57 @@ class HomeView extends ConsumerWidget {
                                           borderRadius: BorderRadius.circular(10),
                                           borderSide: BorderSide(color: Colors.grey.shade400, width: 1)
                                       ),
-                                      hintText: "Type here ..."
+                                      hintText: "search ..."
                                     ),
+                                  ),
+                                ),
+                                Divider(color: Colors.grey.shade300, thickness: 1,),
+
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Row(
+                                          children: [
+                                            const Icon(Icons.dashboard_outlined, color: Colors.black87, size: 20,),
+                                            const SizedBox(width: 10,),
+                                            Text("Dashboard", style: GoogleFonts.roboto(color: Colors.black87, fontWeight: FontWeight.w600, fontSize: 14),)
+                                          ],
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Row(
+                                          children: [
+                                            const Icon(Icons.crop_square, color: Colors.black87, size: 20,),
+                                            const SizedBox(width: 10,),
+                                            Text("Moving", style: GoogleFonts.roboto(color: Colors.black87, fontWeight: FontWeight.w600, fontSize: 14),)
+                                          ],
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Row(
+                                          children: [
+                                            const Icon(Icons.currency_exchange_outlined, color: Colors.black87, size: 20,),
+                                            const SizedBox(width: 10,),
+                                            Text("Budget Planner", style: GoogleFonts.roboto(color: Colors.black87, fontWeight: FontWeight.w600, fontSize: 14),)
+                                          ],
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Row(
+                                          children: [
+                                            const Icon(CupertinoIcons.briefcase_fill, color: Colors.black87, size: 20,),
+                                            const SizedBox(width: 10,),
+                                            Text("Services Directory", style: GoogleFonts.roboto(color: Colors.black87, fontWeight: FontWeight.w600, fontSize: 14),)
+                                          ],
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 )
                               ],
